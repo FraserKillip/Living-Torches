@@ -1,0 +1,16 @@
+[
+{
+  "modid": "fraserk.livingtorches",
+  "name": "Living Torches",
+  "description": "A fun mod with living torches. Inspired by Soaryn and Bacon_Donut",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["FraserK"],
+  "credits": "Soaryn and Bacon_Donut for coming up with the idea.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
