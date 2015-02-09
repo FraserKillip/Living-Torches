@@ -1,0 +1,28 @@
+# Configuration
+general.doRandomMove.label=Do Random Move
+general.doRandomMove.comment=Do torches randomly move around
+
+general.movementFrequency.label=Torch movement frequency
+general.movementFrequency.comment=How often do torches move? 0 to 100 (percentage)
+
+general.doSetOnFire.label=Do Torches set players on fire
+general.doSetOnFire.comment=Torches can randomly set players on fire
+
+general.setFireChance.label=Set fire chance
+general.setFireChance.comment=The chance of being set of fire.
+
+general.setFireLength.label=Length of fire damage in seconds
+general.setFireLength.comment=Length of fire damage in seconds
+
+general.doGrow.label=Do torches grow
+general.doGrow.comment=Do torches start off as babies
+
+general.lifetime.label=Torch lifetime
+general.lifetime.comment=How long do torches take to grow
+
+
+# Creative Tabs
+itemGroup.livingtorches=Living Torches
+
+# Items
+tile.livingTorch.name=Torch

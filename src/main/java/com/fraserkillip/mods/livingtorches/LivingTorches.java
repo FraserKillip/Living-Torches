@@ -1,20 +1,40 @@
 package com.fraserkillip.mods.livingtorches;
 
-import net.minecraft.init.Blocks;
+import com.fraserkillip.mods.livingtorches.handler.ConfigurationHandler;
+import com.fraserkillip.mods.livingtorches.init.ModBlocks;
+import com.fraserkillip.mods.livingtorches.proxy.IProxy;
+import com.fraserkillip.mods.livingtorches.reference.Reference;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
+import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 
-@Mod(modid = LivingTorches.MODID, version = LivingTorches.VERSION)
+@Mod(modid = Reference.MODID, version = Reference.VERSION)
 public class LivingTorches
 {
-    public static final String MODID = "fraserk.livingtorches";
-    public static final String VERSION = "1.0";
-    
+    @Mod.Instance(Reference.MODID)
+    public static LivingTorches instance;
+
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+    public static IProxy proxy;
+
+    @EventHandler
+    public void preinit(FMLPreInitializationEvent event)
+    {
+        ConfigurationHandler.init(event.getSuggestedConfigurationFile());
+
+        ModBlocks.init();
+        proxy.initRenderingAndTextures();
+    }
+
     @EventHandler
     public void init(FMLInitializationEvent event)
+    {    }
+
+    @EventHandler
+    public void postInit(FMLPostInitializationEvent event)
     {
-		// some example code
-        System.out.println("DIRT BLOCK >> "+Blocks.dirt.getUnlocalizedName());
     }
 }
