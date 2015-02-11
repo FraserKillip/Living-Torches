@@ -18,8 +18,8 @@ import net.minecraftforge.common.ISpecialArmor;
  * Created by fraserkillip on 10/02/15.
  */
 public class ItemFiremansHelmet extends ItemArmor implements ISpecialArmor {
-    public ItemFiremansHelmet(ArmorMaterial p_i45325_1_, int p_i45325_2_, int p_i45325_3_) {
-        super(p_i45325_1_, p_i45325_2_, p_i45325_3_);
+    public ItemFiremansHelmet() {
+        super(ItemArmor.ArmorMaterial.CHAIN, 0, 0);
         setUnlocalizedName(Names.Items.FiremansHelmet);
     }
 

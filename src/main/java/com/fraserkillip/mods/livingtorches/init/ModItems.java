@@ -12,8 +12,8 @@ import net.minecraft.item.ItemArmor;
  */
 public class ModItems {
 
-    public static final ItemArmor FiremansHelmet = new ItemFiremansHelmet(ItemArmor.ArmorMaterial.CHAIN, 0, 0);
-    public static final ItemArmor ReinforcedFiremansHelmet = new ItemReinforcedFiremansHelmet(ItemArmor.ArmorMaterial.CHAIN, 0, 0);
+    public static final ItemArmor FiremansHelmet = new ItemFiremansHelmet();
+    public static final ItemArmor ReinforcedFiremansHelmet = new ItemReinforcedFiremansHelmet();
 
     public static void init() {
         GameRegistry.registerItem(FiremansHelmet, Names.Items.FiremansHelmet, Reference.MODID);

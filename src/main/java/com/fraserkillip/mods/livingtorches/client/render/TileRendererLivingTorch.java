@@ -32,36 +32,37 @@ public class TileRendererLivingTorch extends TileEntitySpecialRenderer {
         GL11.glTranslated(d + 0.525D, d1 + 1.5, d2 + 0.475D);
         GL11.glScalef(-1F, -1F, 1F);
 
-        int meta = tm.getBlockMetadata();
+        if(tm != null) {
+            int meta = tm.getBlockMetadata();
 
-        switch(meta) {
-            case 1:
-                GL11.glRotatef(-25F, 0, 0, 1);
-                GL11.glScalef(0.8f, 0.9f, 0.8f);
-                GL11.glTranslatef(-0.08f, -0.05f, 0);
-                break;
-            case 2:
-                GL11.glRotatef(180F, 0, 1, 0);
-                GL11.glRotatef(-25F, 0, 0, 1);
-                GL11.glScalef(0.8f, 0.9f, 0.8f);
-                GL11.glTranslatef(-0.15f, -0.05f, 0);
-                break;
-            case 3:
-                GL11.glRotatef(90F, 0, 1, 0);
-                GL11.glRotatef(-25F, 0, 0, 1);
-                GL11.glScalef(0.8f, 0.9f, 0.8f);
-                GL11.glTranslatef(-0.15f, -0.05f, 0);
-                break;
-            case 4:
-                GL11.glRotatef(270F, 0, 1, 0);
-                GL11.glRotatef(-25F, 0, 0, 1);
-                GL11.glScalef(0.8f, 0.9f, 0.8f);
-                GL11.glTranslatef(-0.08f, -0.05f, 0);
-                break;
+            switch (meta) {
+                case 1:
+                    GL11.glRotatef(-25F, 0, 0, 1);
+                    GL11.glScalef(0.8f, 0.9f, 0.8f);
+                    GL11.glTranslatef(-0.08f, -0.05f, 0);
+                    break;
+                case 2:
+                    GL11.glRotatef(180F, 0, 1, 0);
+                    GL11.glRotatef(-25F, 0, 0, 1);
+                    GL11.glScalef(0.8f, 0.9f, 0.8f);
+                    GL11.glTranslatef(-0.15f, -0.05f, 0);
+                    break;
+                case 3:
+                    GL11.glRotatef(90F, 0, 1, 0);
+                    GL11.glRotatef(-25F, 0, 0, 1);
+                    GL11.glScalef(0.8f, 0.9f, 0.8f);
+                    GL11.glTranslatef(-0.15f, -0.05f, 0);
+                    break;
+                case 4:
+                    GL11.glRotatef(270F, 0, 1, 0);
+                    GL11.glRotatef(-25F, 0, 0, 1);
+                    GL11.glScalef(0.8f, 0.9f, 0.8f);
+                    GL11.glTranslatef(-0.08f, -0.05f, 0);
+                    break;
+            }
         }
-
         Minecraft.getMinecraft().renderEngine.bindTexture(txLivingtorch);
-        modelLivingTorch.render(0.0625F, tm);
+        modelLivingTorch.renderTile(0.0625F, tm);
 
 
         GL11.glPopMatrix();

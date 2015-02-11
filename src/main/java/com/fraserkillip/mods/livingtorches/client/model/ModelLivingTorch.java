@@ -1,5 +1,6 @@
 package com.fraserkillip.mods.livingtorches.client.model;
 
+import com.fraserkillip.mods.livingtorches.entity.EntityLivingTorch;
 import com.fraserkillip.mods.livingtorches.tileentity.TileEntityLivingTorch;
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
@@ -69,13 +70,27 @@ public class ModelLivingTorch extends ModelBase {
         this.leftarm.addChild(this.leftforearm);
     }
 
-    public void render(float f5, TileEntityLivingTorch tm) {
+    public void renderTile(float f5, TileEntityLivingTorch tm) {
         GL11.glPushMatrix();
         GL11.glScaled(1D / modelScale[0], 1D / modelScale[1], 1D / modelScale[2]);
         this.Torch.render(f5);
         GL11.glPopMatrix();
-        this.setRotateAngle(rightarm, 0.0F, 0.0F, 2.41309222380736F + (float)Math.sin(tm.movement/50.0)/3);
-        this.setRotateAngle(leftarm, 0.0F, 0.0F, 2.41309222380736F + (float)Math.sin(tm.movement/50.0 - 180)/3);
+        if(tm != null) {
+            this.setRotateAngle(rightarm, 0.0F, 0.0F, 2.41309222380736F + (float) Math.sin(tm.movement / 50.0) / 3);
+            this.setRotateAngle(leftarm, 0.0F, 0.0F, 2.41309222380736F + (float) Math.sin(tm.movement / 50.0 - 180) / 3);
+        }
+    }
+
+    public void renderEntity(float f5, EntityLivingTorch entity) {
+        GL11.glPushMatrix();
+        GL11.glScaled(1D / modelScale[0], 1D / modelScale[1], 1D / modelScale[2]);
+        this.Torch.render(f5);
+        this.setRotateAngle(rightarm, 0.0F, 0.0F, 2.41309222380736F + (float) Math.PI/2);
+        GL11.glPopMatrix();
+        /*if(tm != null) {
+            this.setRotateAngle(rightarm, 0.0F, 0.0F, 2.41309222380736F + (float) Math.sin(tm.movement / 50.0) / 3);
+            this.setRotateAngle(leftarm, 0.0F, 0.0F, 2.41309222380736F + (float) Math.sin(tm.movement / 50.0 - 180) / 3);
+        }*/
     }
 
     /**

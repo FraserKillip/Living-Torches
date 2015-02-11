@@ -20,8 +20,8 @@ import net.minecraftforge.common.ISpecialArmor;
  * Created by fraserkillip on 10/02/15.
  */
 public class ItemReinforcedFiremansHelmet extends ItemArmor implements ISpecialArmor {
-    public ItemReinforcedFiremansHelmet(ArmorMaterial p_i45325_1_, int p_i45325_2_, int p_i45325_3_) {
-        super(p_i45325_1_, p_i45325_2_, p_i45325_3_);
+    public ItemReinforcedFiremansHelmet() {
+        super(ArmorMaterial.DIAMOND, 0, 0);
         setUnlocalizedName(Names.Items.ReinforcedFiremansHelmet);
     }
 
@@ -32,7 +32,7 @@ public class ItemReinforcedFiremansHelmet extends ItemArmor implements ISpecialA
 
     @Override
     public int getArmorDisplay(EntityPlayer player, ItemStack armor, int slot) {
-        return 1;
+        return 3;
     }
 
     @Override
