@@ -26,3 +26,5 @@ itemGroup.livingtorches=Living Torches
 
 # Items
 tile.livingTorch.name=Torch
+item.firemansHelmet.name=Fireman's Helmet
+item.reinforcedFiremansHelmet.name=Reinforced Fireman's Helmet

@@ -2,6 +2,7 @@ package com.fraserkillip.mods.livingtorches;
 
 import com.fraserkillip.mods.livingtorches.handler.ConfigurationHandler;
 import com.fraserkillip.mods.livingtorches.init.ModBlocks;
+import com.fraserkillip.mods.livingtorches.init.ModItems;
 import com.fraserkillip.mods.livingtorches.proxy.IProxy;
 import com.fraserkillip.mods.livingtorches.reference.Reference;
 import cpw.mods.fml.common.Mod;
@@ -26,6 +27,7 @@ public class LivingTorches
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
 
         ModBlocks.init();
+        ModItems.init();
         proxy.initRenderingAndTextures();
     }
 

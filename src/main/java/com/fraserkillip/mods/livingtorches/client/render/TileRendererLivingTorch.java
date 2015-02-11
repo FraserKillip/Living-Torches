@@ -23,10 +23,10 @@ public class TileRendererLivingTorch extends TileEntitySpecialRenderer {
     @Override
     public void renderTileEntityAt(TileEntity tileentity, double d0, double d1,	double d2, float f)
     {
-        this.renderTreadmill((TileEntityLivingTorch)tileentity, d0, d1, d2, f);
+        this.renderLivingTorch((TileEntityLivingTorch) tileentity, d0, d1, d2, f);
     }
 
-    public void renderTreadmill(TileEntityLivingTorch tm, double d, double d1, double d2, float f){
+    public void renderLivingTorch(TileEntityLivingTorch tm, double d, double d1, double d2, float f){
         GL11.glPushMatrix();
 
         GL11.glTranslated(d + 0.525D, d1 + 1.5, d2 + 0.475D);
@@ -61,7 +61,7 @@ public class TileRendererLivingTorch extends TileEntitySpecialRenderer {
         }
 
         Minecraft.getMinecraft().renderEngine.bindTexture(txLivingtorch);
-        modelLivingTorch.render(0.0625F);
+        modelLivingTorch.render(0.0625F, tm);
 
 
         GL11.glPopMatrix();

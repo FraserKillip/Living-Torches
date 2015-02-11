@@ -1,6 +1,7 @@
 package com.fraserkillip.mods.livingtorches.block;
 
 import com.fraserkillip.mods.livingtorches.creativetab.CreativeTab;
+import com.fraserkillip.mods.livingtorches.init.ModItems;
 import com.fraserkillip.mods.livingtorches.reference.Names;
 import com.fraserkillip.mods.livingtorches.reference.Settings;
 import com.fraserkillip.mods.livingtorches.tileentity.TileEntityLivingTorch;
@@ -9,6 +10,7 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.potion.Potion;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ChatComponentStyle;
 import net.minecraft.util.EnumChatFormatting;
@@ -44,8 +46,10 @@ public class BlockLivingTorch extends BlockTorch implements ITileEntityProvider 
 
     @Override
     public void onEntityCollidedWithBlock(World world, int x, int y, int z, Entity entity) {
-        if(entity instanceof EntityLivingBase && !entity.isImmuneToFire() && Settings.General.doSetOnFire) {
+        if(entity instanceof EntityLivingBase && !(entity.isImmuneToFire() || ((EntityLivingBase) entity).isPotionActive(Potion.fireResistance))&& Settings.General.doSetOnFire) {
             if(Math.random() < Settings.General.setFireChance) {
+                if(entity instanceof EntityLivingBase && ((EntityLivingBase) entity).getEquipmentInSlot(4) != null && ((EntityLivingBase) entity).getEquipmentInSlot(4).getItem() == ModItems.FiremansHelmet) return;
+
                 entity.setFire(Settings.General.setFireLength);
                 if (entity instanceof EntityPlayer) {
                     ((EntityPlayer) entity).addChatMessage(new ChatComponentStyle() {

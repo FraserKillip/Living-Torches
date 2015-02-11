@@ -7,8 +7,10 @@ import net.minecraft.tileentity.TileEntity;
  */
 public class TileEntityLivingTorch extends TileEntity {
 
+    public long movement = Math.round(Math.random()*100.0);
+
     @Override
     public void updateEntity() {
-        super.updateEntity();
+        movement++;
     }
 }

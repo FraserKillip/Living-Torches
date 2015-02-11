@@ -9,4 +9,9 @@ public class Names {
         public static final String livingTorch = "livingTorch";
     }
 
+    public class Items {
+        public static final String FiremansHelmet = "firemansHelmet";
+        public static final String ReinforcedFiremansHelmet = "reinforcedFiremansHelmet";
+    }
+
 }
