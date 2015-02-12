@@ -35,7 +35,10 @@ public class LivingTorches
 
     @EventHandler
     public void init(FMLInitializationEvent event)
-    {    }
+    {
+        ModItems.registerRecipes();
+        ModBlocks.registerRecipies();
+    }
 
     @EventHandler
     public void postInit(FMLPostInitializationEvent event)

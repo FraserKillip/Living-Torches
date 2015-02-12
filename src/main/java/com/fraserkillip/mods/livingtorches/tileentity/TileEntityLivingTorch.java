@@ -1,6 +1,7 @@
 package com.fraserkillip.mods.livingtorches.tileentity;
 
 import com.fraserkillip.mods.livingtorches.entity.EntityLivingTorch;
+import com.fraserkillip.mods.livingtorches.reference.Settings;
 import net.minecraft.tileentity.TileEntity;
 
 /**
@@ -12,9 +13,10 @@ public class TileEntityLivingTorch extends TileEntity {
 
     @Override
     public void updateEntity() {
+//        if(worldObj.isRemote) worldObj.setBlockToAir(this.xCoord, this.yCoord, this.zCoord);
         movement++;
 
-        if(movement == 300 && getBlockMetadata() != 5 && worldObj.isRemote) {
+        if(Settings.General.doFallOfWalls && Math.random() < Settings.General.fallChance && getBlockMetadata() != 5 && !worldObj.isRemote) {
             EntityLivingTorch entity = new EntityLivingTorch(worldObj);
             entity.setPosition(this.xCoord + 0.5, this.yCoord + 0.5, this.zCoord + 0.5);
             if(!worldObj.spawnEntityInWorld(entity)) {

@@ -9,6 +9,9 @@ public class Settings {
         public static boolean doRandomMove;
         public static int movementFrequency;
 
+        public static boolean doFallOfWalls;
+        public static float fallChance;
+
         public static boolean doSetOnFire;
         public static float setFireChance;
         public static int setFireLength;

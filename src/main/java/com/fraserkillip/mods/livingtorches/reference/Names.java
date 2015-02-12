@@ -6,7 +6,11 @@ package com.fraserkillip.mods.livingtorches.reference;
 public class Names {
 
     public class Blocks {
-        public static final String livingTorch = "livingTorch";
+        public static final String livingTorch = "livingTorchBlock";
+    }
+
+    public class TileEntities {
+        public static final String tileEntityLivingTorch = "tileEntityLivingTorch";
     }
 
     public class Items {

@@ -12,6 +12,14 @@ public final class Messages
         public static final String GENERAL_MOVEMENT_FREQUENCY_LABEL = "general.movementFrequency.label";
         public static final String GENERAL_MOVEMENT_FREQUENCY_COMMENT = "general.movementFrequency.comment";
 
+        public static final String GENERAL_DO_FALL_OFF_WALLS = "general.doFallOffWalls";
+        public static final String GENERAL_DO_FALL_OFF_WALLS_LABEL = "general.doFallOffWalls.label";
+        public static final String GENERAL_DO_FALL_OFF_WALLS_COMMENT = "general.doFallOffWalls.comment";
+
+        public static final String GENERAL_FALL_CHANCE = "general.fallChance";
+        public static final String GENERAL_FALL_CHANCE_LABEL = "general.fallChance.label";
+        public static final String GENERAL_FALL_CHANCE_COMMENT = "general.fallChance.comment";
+
         public static final String GENERAL_DO_SET_ON_FIRE = "general.doSetOnFire";
         public static final String GENERAL_DO_SET_ON_FIRE_LABEL = "general.doSetOnFire.label";
         public static final String GENERAL_DO_SET_ON_FIRE_COMMENT = "general.doSetOnFire.comment";

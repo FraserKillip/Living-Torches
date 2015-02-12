@@ -17,8 +17,6 @@ public class RenderLivingTorch extends Render {
 
     private ModelLivingTorch model;
 
-    private float angle = 0;
-
     public RenderLivingTorch() {
         model = new ModelLivingTorch();
     }
@@ -27,7 +25,6 @@ public class RenderLivingTorch extends Render {
     public void doRender(Entity entity, double x, double y, double z, float yaw, float partialTickTime)  {
         GL11.glPushMatrix();
         GL11.glTranslatef((float)x, (float)y + 1.5f, (float)z);
-        GL11.glRotatef(angle++, 0.0F, 1.0F, 0.0F);
         GL11.glScalef(-1, -1, 1);
 
         bindTexture(texture);

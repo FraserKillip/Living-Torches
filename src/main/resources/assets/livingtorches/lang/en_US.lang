@@ -5,6 +5,12 @@ general.doRandomMove.comment=Do torches randomly move around
 general.movementFrequency.label=Torch movement frequency
 general.movementFrequency.comment=How often do torches move? 0 to 100 (percentage)
 
+general.doFallOffWalls.label=Do torches fall off walls
+general.doFallOffWalls.comment=Do torches fall off walls
+
+general.fallChance.label=Torch fall chance
+general.fallChance.comment=The chance each tick of each torch falling
+
 general.doSetOnFire.label=Do Torches set players on fire
 general.doSetOnFire.comment=Torches can randomly set players on fire
 
@@ -25,6 +31,6 @@ general.lifetime.comment=How long do torches take to grow
 itemGroup.livingtorches=Living Torches
 
 # Items
-tile.livingTorch.name=Torch
+tile.livingTorchBlock.name=Torch
 item.firemansHelmet.name=Fireman's Helmet
 item.reinforcedFiremansHelmet.name=Reinforced Fireman's Helmet
