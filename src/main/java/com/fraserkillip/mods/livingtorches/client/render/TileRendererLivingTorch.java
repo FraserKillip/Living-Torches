@@ -59,6 +59,9 @@ public class TileRendererLivingTorch extends TileEntitySpecialRenderer {
                     GL11.glScalef(0.8f, 0.9f, 0.8f);
                     GL11.glTranslatef(-0.08f, -0.05f, 0);
                     break;
+                case 5:
+                    GL11.glRotatef(tm.getRenderYaw() + 90f, 0, 1, 0);
+                    break;
             }
         }
         Minecraft.getMinecraft().renderEngine.bindTexture(txLivingtorch);

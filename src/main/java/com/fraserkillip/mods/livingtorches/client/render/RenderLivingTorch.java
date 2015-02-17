@@ -29,6 +29,8 @@ public class RenderLivingTorch extends Render {
 
         bindTexture(texture);
 
+        GL11.glRotatef(((EntityLivingTorch) entity).renderYawOffset + 90f, 0, 1, 0);
+
         model.renderEntity(0.0625F, (EntityLivingTorch) entity);
 
         GL11.glPopMatrix();
